@@ -21,7 +21,6 @@ mongoose.connect('mongodb+srv://aymanebelghacham:aymaneleo2001@cluster0.qkx9ud3.
 });
 
 
-
 // Mongoose models for users and tasks
 const taskSchema = new mongoose.Schema({
   title: String,
@@ -36,7 +35,7 @@ const Task = mongoose.model('Task', taskSchema);
 // Start the server
 // This part is moved inside the successful MongoDB connection block
 // app.listen(port, () => {
-//   console.log(Server is running on port ${port});
+//   console.log(`Server is running on port ${port}`);
 // });
 // Create a new task
 app.post('/tasks', async (req, res) => {
@@ -79,4 +78,4 @@ app.delete('/tasks/:id', async (req, res) => {
   }
 });
 
-// Start the server
+// Start the server
